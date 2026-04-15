@@ -1,0 +1,63 @@
+[
+  {
+    "postId": "sample_001",
+    "authorName": "Nguyễn Văn Đức",
+    "groupName": "BĐS Hoà Lạc",
+    "text": "Bán lô đất 100m2 tại Hoà Lạc, Thạch Thất. Giá 1 tỷ 5 thương lượng. Mặt tiền 5m, đường ô tô tránh. LH: 0912.345.678 hoặc 0987 654 321",
+    "comments": [
+      {"text": "Giá nét đi anh ơi", "authorName": "Nguyễn Văn A", "commentId": "cmt_001"},
+      {"text": "Em có lô 80m2 ở Đồng Trúc, giá 1 tỷ 2. LH 0933222111", "authorName": "Trần B", "commentId": "cmt_002"}
+    ]
+  },
+  {
+    "postId": "sample_002",
+    "authorName": "Trần Thị Mai",
+    "groupName": "BĐS Hoà Lạc",
+    "text": "Đất nền Đông Xuân, Quốc Oai. 80m2 giá 15tr/m2. Sổ đỏ chính chủ, sang tên trong ngày. Zalo: 0355123456",
+    "comments": [
+      {"text": "Vị trí chính xác ở đâu vậy ạ?", "authorName": "Lê C", "commentId": "cmt_003"},
+      {"text": "Có lô nào tài chính 1 tỷ 8 không chị? SĐT 0909888777", "authorName": "Hoàng D", "commentId": "cmt_004"}
+    ]
+  },
+  {
+    "postId": "sample_003",
+    "authorName": "Phạm Hùng",
+    "groupName": "BĐS Thạch Thất",
+    "text": "Cần bán gấp lô góc 120m2 Tân Xã Thạch Thất. Nhỉnh 1 tỷ. Liên hệ chính chủ 0909111222.",
+    "contactPhone": "+84 909 111 222",
+    "comments": []
+  },
+  {
+    "postId": "sample_004",
+    "authorName": "Lê Minh",
+    "groupName": "BĐS Quốc Oai",
+    "text": "Bán đất Ngọc Liệp Quốc Oai 60m2. Giá 4xtr/m2. LH 0968762392",
+    "comments": [
+      {"text": "Tổng bao nhiêu vậy anh?", "authorName": "Hà E", "commentId": "cmt_005"},
+      {"text": "Em có mảnh 90m2 Hoà Lạc giá 2 tỷ. Ai cần liên hệ 0972225891", "authorName": "Đỗ F", "commentId": "cmt_006"}
+    ]
+  },
+  {
+    "postId": "sample_005",
+    "authorName": "Trần Tuấn",
+    "groupName": "BĐS Hoà Lạc",
+    "text": "TÀI CHÍNH 1 TỶ 2 cần mua lô đất Hoà Lạc hoặc Thạch Thất. Diện tích 60-100m2. Ai có để lại TT giúp em nhé!",
+    "comments": [
+      {"text": "Em có lô 70m2 Thạch Hoà, sổ đỏ, giá 1 tỷ 1. Gọi em 0977333444", "authorName": "Ngọc Anh", "commentId": "cmt_007"},
+      {"text": "80m2 Cẩm Yên, đường ô tô, 1 tỷ 150. LH 0988555666", "authorName": "Hoàng Hải", "commentId": "cmt_008"},
+      {"text": "Vào inbox em nhé bạn", "authorName": "Lan Hương", "commentId": "cmt_009"},
+      {"text": "Em có đất Bình Yên 90m2 giá nhỉnh 1 tỷ. Zalo 0966777888", "authorName": "Minh Tuấn", "commentId": "cmt_010"}
+    ]
+  },
+  {
+    "postId": "sample_006",
+    "authorName": "Anonymous participant",
+    "groupName": "BĐS Quốc Oai-Thạch Thất-Hoài Đức-Hoà Lạc",
+    "text": "Ai bán đất khu vực Quốc Oai tài chính 1 tỷ 5 để lại thông tin giúp ạ. Em cần mua gấp, có sổ đỏ ưu tiên.",
+    "comments": [
+      {"text": "100m2 Ngọc Liệp, full thổ, đường ô tô, 1 tỷ 4. LH 0912444555", "authorName": "Đức Mạnh", "commentId": "cmt_011"},
+      {"text": "Inbox bạn nhé", "authorName": "Thu Hà", "commentId": "cmt_012"},
+      {"text": "85m2 Đồng Trúc, sổ đỏ, 1 tỷ 3. Gọi anh 0945666777", "authorName": "Văn Nam", "commentId": "cmt_013"}
+    ]
+  }
+]
