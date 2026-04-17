@@ -8,7 +8,6 @@ import {
 } from '@ant-design/icons'
 import { fetchGroups, addGroup, removeGroup } from '../../api/groups'
 import type { GroupItem } from '../../api/groups'
-import { useIsMobile } from '../../hooks/useIsMobile'
 
 const { Text } = Typography
 
@@ -18,7 +17,6 @@ export default function GroupsPanel() {
   const [newUrl, setNewUrl] = useState('')
   const [adding, setAdding] = useState(false)
   const [messageApi, contextHolder] = message.useMessage()
-  const isMobile = useIsMobile()
 
   const load = useCallback(async () => {
     setLoading(true)
@@ -59,10 +57,22 @@ export default function GroupsPanel() {
     }
   }
 
+  const getGroupLabel = (item: GroupItem) => {
+    if (item.name?.trim()) return item.name.trim()
+
+    try {
+      const parsed = new URL(item.url)
+      return parsed.pathname.replace(/^\/+/, '') || parsed.hostname
+    } catch {
+      return item.url
+    }
+  }
+
   return (
     <>
       {contextHolder}
       <Card
+        className="apple-panel apple-groups-panel"
         size="small"
         title={
           <Space>
@@ -70,10 +80,10 @@ export default function GroupsPanel() {
             <span>Facebook Groups ({groups.length})</span>
           </Space>
         }
-        style={{ marginBottom: isMobile ? 8 : 12 }}
       >
         <Space.Compact style={{ width: '100%', marginBottom: 12 }}>
           <Input
+            className="apple-control-input"
             placeholder="Dán URL Facebook Group..."
             value={newUrl}
             onChange={(e) => setNewUrl(e.target.value)}
@@ -85,19 +95,21 @@ export default function GroupsPanel() {
             icon={<PlusOutlined />}
             loading={adding}
             onClick={handleAdd}
+            className="apple-primary-btn"
           >
             Thêm
           </Button>
         </Space.Compact>
 
         <List
+          className="apple-group-list"
           size="small"
           loading={loading}
           dataSource={groups}
           locale={{ emptyText: 'Chưa có group nào' }}
           renderItem={(item: GroupItem, index: number) => (
             <List.Item
-              style={{ padding: '6px 0' }}
+              className="apple-group-item"
               actions={[
                 <Popconfirm
                   key="del"
@@ -111,24 +123,32 @@ export default function GroupsPanel() {
                     danger
                     size="small"
                     icon={<DeleteOutlined />}
+                    className="apple-group-delete"
                   />
                 </Popconfirm>,
               ]}
             >
-              <Space size={isMobile ? 4 : 8} wrap>
-                <Tag color="blue">{index + 1}</Tag>
-                <Text strong style={{ fontSize: 13 }}>
-                  {item.name || 'Unknown'}
-                </Text>
+              <div className="apple-group-row">
+                <div className="apple-group-main">
+                  <Tag color="blue" className="apple-group-index">{index + 1}</Tag>
+                  <div className="apple-group-copy">
+                    <Text strong className="apple-group-name">
+                      {getGroupLabel(item)}
+                    </Text>
+                    <Text className="apple-group-url" ellipsis>
+                      {item.url}
+                    </Text>
+                  </div>
+                </div>
                 <a
                   href={item.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ fontSize: 12 }}
+                  className="apple-subtle-link apple-group-open"
                 >
                   <LinkOutlined /> Mở
                 </a>
-              </Space>
+              </div>
             </List.Item>
           )}
         />
